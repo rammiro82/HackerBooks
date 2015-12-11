@@ -9,7 +9,7 @@
 import UIKit
 
 
-class BookModel: Equatable, Comparable{
+class Book: Equatable, Comparable{
     
     //MARK: - Properties
     let title : String
@@ -49,7 +49,7 @@ class BookModel: Equatable, Comparable{
 
 
 //MARK: - Operators
-func == (lhs: BookModel, rhs: BookModel) -> Bool{
+func == (lhs: Book, rhs: Book) -> Bool{
     //son el mismo objeto
     guard !(lhs === rhs) else{
         return true
@@ -59,6 +59,6 @@ func == (lhs: BookModel, rhs: BookModel) -> Bool{
     return (lhs.title == rhs.title)
 }
 
-func < (lhs: BookModel, rhs: BookModel) -> Bool{
+func < (lhs: Book, rhs: Book) -> Bool{
     return (lhs.title < rhs.title)
 }
