@@ -77,12 +77,7 @@
 		288352CF1C0B99840048B5A8 /* HackerBooks */ = {
 			isa = PBXGroup;
 			children = (
-				288352D01C0B99840048B5A8 /* AppDelegate.swift */,
-				288352D21C0B99840048B5A8 /* ViewController.swift */,
-				288352D41C0B99840048B5A8 /* Main.storyboard */,
-				288352D71C0B99840048B5A8 /* Assets.xcassets */,
-				288352D91C0B99840048B5A8 /* LaunchScreen.storyboard */,
-				288352DC1C0B99840048B5A8 /* Info.plist */,
+				28B0069A1C1B3B68003FAC7A /* App */,
 			);
 			path = HackerBooks;
 			sourceTree = "<group>";
@@ -94,6 +89,35 @@
 				288352E71C0B99850048B5A8 /* Info.plist */,
 			);
 			path = HackerBooksTests;
+			sourceTree = "<group>";
+		};
+		28B0069A1C1B3B68003FAC7A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				288352D71C0B99840048B5A8 /* Assets.xcassets */,
+				288352DC1C0B99840048B5A8 /* Info.plist */,
+				288352D01C0B99840048B5A8 /* AppDelegate.swift */,
+				288352D21C0B99840048B5A8 /* ViewController.swift */,
+				28B0069C1C1B3B8D003FAC7A /* Models */,
+				28B0069B1C1B3B78003FAC7A /* Storyboard */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		28B0069B1C1B3B78003FAC7A /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				288352D41C0B99840048B5A8 /* Main.storyboard */,
+				288352D91C0B99840048B5A8 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		28B0069C1C1B3B8D003FAC7A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,6 +410,7 @@
 				288352EC1C0B99850048B5A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		288352ED1C0B99850048B5A8 /* Build configuration list for PBXNativeTarget "HackerBooksTests" */ = {
 			isa = XCConfigurationList;
@@ -394,6 +419,7 @@
 				288352EF1C0B99850048B5A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
