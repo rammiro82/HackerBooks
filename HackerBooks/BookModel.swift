@@ -15,7 +15,6 @@ class BookModel: Equatable, Comparable{
     let title : String
     let authors : [String]
     let tags    : [String]
-    let image   : UIImage
     let urlImage: NSURL
     let urlPDF  : NSURL
     
@@ -32,14 +31,12 @@ class BookModel: Equatable, Comparable{
     init(title : String,
         authors : [String],
         tags    : [String],
-        image   : UIImage,
         urlImage: NSURL,
         urlPDF  : NSURL){
         
             self.title      = title
             self.authors    = authors
             self.tags       = tags
-            self.image      = image
             self.urlImage   = urlImage
             self.urlPDF     = urlPDF
     }
