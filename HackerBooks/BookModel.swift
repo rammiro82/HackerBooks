@@ -47,6 +47,17 @@ class Book: Equatable, Comparable{
     
 }
 
+extension Book: CustomStringConvertible{
+    var description: String{
+        get{
+            if title != ""{
+                return "<\(self.dynamicType): \(title)>"
+            }else{
+                return "<\(self.dynamicType)>"
+            }
+        }
+    }
+}
 
 //MARK: - Operators
 func == (lhs: Book, rhs: Book) -> Bool{

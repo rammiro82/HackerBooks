@@ -36,22 +36,4 @@ class Libray {
     func bookAtIndex (index: Int) -> Book?{
         return nil
     }
-    
-    func decodeJSON(){
-        let str = "{\"names\": [\"Bob\", \"Tim\", \"Tina\"]}"
-        let data = str.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
-        
-        do {
-            let json = try NSJSONSerialization.JSONObjectWithData(data, options: []) as! [String: AnyObject]
-            if let names = json["names"] as? [String] {
-                print(names)
-            }
-        } catch let error as NSError {
-            print("Failed to load: \(error.localizedDescription)")
-        }
-    }
-    
-    func getJSON(){
-        
-    }
 }
