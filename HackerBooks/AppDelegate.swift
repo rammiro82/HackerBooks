@@ -58,9 +58,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             data = NSData(contentsOfURL: url),
             libros = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? JSONArray
             {
-                let a = decode(bookArray: libros)
+                bibilioteca = Library(books: decode(bookArray: libros))
                 
-                print(a)
+                print("countBooks -> \(bibilioteca?.countBooks)")
+                print("bookCountForTag -> \(bibilioteca?.bookCountForTag("data mining"))")
+                print("booksForTag -> \(bibilioteca?.booksForTag("data mining"))")
+                print("countBooks -> \(bibilioteca?.countBooks)")
+                
             }
         }catch{
             print("Error: Parseando el JSON")

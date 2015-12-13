@@ -9,8 +9,12 @@
 import UIKit
 
 class Library {
+    //
     var books   : [Book]
-    var tags    : [String]
+    
+    // diccionario de tags, donde la clave es el tag correspondiente y los valores array de Books
+    var tags        : [String]
+    var tagsBooks   : [String:[Book]]
     
     static let URL_JSON = "https://t.co/K9ziV0z3SJ"
     static let LOCAL_LIBRARY_DATA = "HackersBooks_local_data"
@@ -27,46 +31,52 @@ class Library {
         }
     }
     
-    init(books: [Book], tags: [String]){
+    init(books: [Book]){
+        
+        tagsBooks = Dictionary<String, Array<Book>>()
+        (self.tags,self.tagsBooks) = Library.procesarTags(books)
+        
         self.books = books
-        self.tags  = tags
     }
     
     // Cantidad de libros que hay en una temática
-    func bookCountForTag(tag: String?) -> Int{
-        return 0
+    func bookCountForTag(tag: String) -> Int{
+        guard !tags.contains(tag) else{
+            return 0
+        }
+        
+        return books.filter({$0.tags.contains(tag)}).count
     }
     
     func booksForTag (tag: String) -> [Book]? {
-        return nil
+        return tagsBooks[tag]
     }
     
-    func bookAtIndex (index: Int) -> Book?{
-        return nil
-    }
-    
-    private static func procesarTags(books: [Book]) -> [String]{
-        var todasTags: [String] = []
+    func bookAtIndex (tag: String, index: Int) -> Book?{
+        var auxBooks = booksForTag(tag)
         
-        todasTags.append("")
+        guard (index >= 0) else{
+            return auxBooks![index]
+        }
+        return nil
+    }
+    
+    private static func procesarTags(books: [Book]) -> ([String], [String:[Book]]){
+        var todasTags: [String] = []
+        var auxTagsBooks: [String:[Book]] = Dictionary<String, Array<Book>>()
+        
         for book in books{
             for tag in book.tags{
                 //procesamos todos los tags de cada libro
                 if(!todasTags.contains(tag)){
                     todasTags.append(tag)
+                    auxTagsBooks[tag] = Array<Book>()
                 }
+                
+                auxTagsBooks[tag]?.append(book)
             }
         }
         
-        return todasTags
-    }
-}
-
-
-extension Library{
-    convenience init(books: [Book]){
-        let tags = Library.procesarTags(books)
-        
-        self.init(books: books, tags: tags)
+        return (todasTags, auxTagsBooks)
     }
 }
