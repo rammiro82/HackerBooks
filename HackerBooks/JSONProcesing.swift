@@ -41,3 +41,66 @@ enum JSONProcessingError : ErrorType{
     case WrongJSONFormat
 }
 
+
+//MARK: - Decoding
+func decode(book json: JSONDictionary) throws -> Book{
+    
+    let authors   = json[JSONKeys.authors.rawValue] as! String
+    
+    // Nos metemos en el mundo imaginario de Yupi donde todo funciona y nada es nil
+    guard let urlStringImage = json[JSONKeys.imageUrl.rawValue] as? String,
+        imageUrl = NSURL(string: urlStringImage) else{
+            throw JSONProcessingError.WrongURLFormatForJSONResource
+    }
+    
+    guard let urlStringPdf = json[JSONKeys.pdfUrl.rawValue] as? String,
+         pdfUrl = NSURL(string: urlStringPdf) else{
+            throw JSONProcessingError.WrongURLFormatForJSONResource
+    }
+    
+    // Estamos en el mundo de Yupi: todo es fabuloso.
+    let tags    = json[JSONKeys.tags.rawValue] as! String
+    let title   = json[JSONKeys.title.rawValue] as! String
+    
+    let authorsArr = authors.characters.split(",").map(String.init)
+    let tagsArr = tags.characters.split(",").map(String.init)
+    
+    // Joé, pues crear en StarWarsCharacter
+    return Book(title: title,
+        authors: authorsArr,
+        tags: tagsArr,
+        urlImage: imageUrl,
+        urlPDF: pdfUrl)
+}
+
+func decode(bookArray json: JSONArray) -> [Book]{
+    var resultado = [Book]()
+    
+    do{
+        for entrada in json{
+            let aux = try decode(book: entrada)
+            
+            resultado.append(aux)
+        }
+        
+    }catch{
+        fatalError("Error procesando el array de libros.")
+    }
+    
+    return resultado
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

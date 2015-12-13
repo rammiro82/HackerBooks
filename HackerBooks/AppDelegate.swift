@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var bibilioteca: Library?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -50,6 +51,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let libro = Book(title: "titulo", authors: ["autor", "Autor2"], tags: ["tag1","tag2"], urlImage: urlImage, urlPDF: urlPDF)
                 
                 print(libro)
+        }
+        
+        do{
+            if let url = NSURL(string: Library.URL_JSON),
+            data = NSData(contentsOfURL: url),
+            libros = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? JSONArray
+            {
+                let a = decode(bookArray: libros)
+                
+                print(a)
+            }
+        }catch{
+            print("Error: Parseando el JSON")
         }
     }
 }
