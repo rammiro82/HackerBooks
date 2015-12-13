@@ -31,6 +31,12 @@ class Library {
         }
     }
     
+    init(){
+        self.books      = [Book]()
+        self.tags       = [String]()
+        self.tagsBooks  = [String:[Book]]()
+    }
+    
     init(books: [Book]){
         
         tagsBooks = Dictionary<String, Array<Book>>()

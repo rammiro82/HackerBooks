@@ -9,10 +9,15 @@
 import UIKit
 
 class LibraryTableViewController: UITableViewController {
+    
+    var detailViewController: DetailViewController? = nil
+    var bibilioteca = Library()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        loadData()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -28,24 +33,51 @@ class LibraryTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return bibilioteca.countTags
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        return bibilioteca.bookCountForTag(bibilioteca.tags[section])
+    }
+    
+    
+    
+    func loadData(){
+        
+        do{
+            if let url = NSURL(string: Library.URL_JSON),
+                data = NSData(contentsOfURL: url),
+                libros = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? JSONArray
+            {
+                bibilioteca = Library(books: decode(bookArray: libros))
+                
+                print("countBooks -> \(bibilioteca.countBooks)")
+                print("bookCountForTag -> \(bibilioteca.bookCountForTag("data mining"))")
+                print("booksForTag -> \(bibilioteca.booksForTag("data mining"))")
+                print("countBooks -> \(bibilioteca.countBooks)")
+                
+            }
+        }catch{
+            print("Error: Parseando el JSON")
+        }
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("bookCellId", forIndexPath: indexPath) as! BookTableViewCell
+        
+        let tag = self.bibilioteca.tags[indexPath.section]
+        let booksForTag = self.bibilioteca.booksForTag(tag)
+        let book = booksForTag?[indexPath.row]
+        
+        cell.lblTitle.text = book?.title
+        cell.lblAuthors.text = book?.authors.joinWithSeparator(", ")
+        
+        cell.imgBook.image = UIImage(data: <#T##NSData#>)
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -82,7 +114,7 @@ class LibraryTableViewController: UITableViewController {
     }
     */
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -90,6 +122,6 @@ class LibraryTableViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+
 
 }
