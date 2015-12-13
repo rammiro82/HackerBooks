@@ -14,6 +14,8 @@
 		286D736D1C1D88AB007EDCFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 286D736B1C1D88AB007EDCFB /* LaunchScreen.storyboard */; };
 		286D73711C1D88CD007EDCFB /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D736F1C1D88CD007EDCFB /* MasterViewController.swift */; };
 		286D73721C1D88CD007EDCFB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D73701C1D88CD007EDCFB /* DetailViewController.swift */; };
+		286D73741C1D915B007EDCFB /* LibraryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D73731C1D915B007EDCFB /* LibraryTableViewController.swift */; };
+		286D73771C1D91CD007EDCFB /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D73761C1D91CD007EDCFB /* BookTableViewCell.swift */; };
 		288352D11C0B99840048B5A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288352D01C0B99840048B5A8 /* AppDelegate.swift */; };
 		288352D81C0B99840048B5A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 288352D71C0B99840048B5A8 /* Assets.xcassets */; };
 		288352E61C0B99850048B5A8 /* HackerBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288352E51C0B99850048B5A8 /* HackerBooksTests.swift */; };
@@ -38,6 +40,8 @@
 		286D736B1C1D88AB007EDCFB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		286D736F1C1D88CD007EDCFB /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		286D73701C1D88CD007EDCFB /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		286D73731C1D915B007EDCFB /* LibraryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryTableViewController.swift; sourceTree = "<group>"; };
+		286D73761C1D91CD007EDCFB /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		288352CD1C0B99840048B5A8 /* HackerBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		288352D01C0B99840048B5A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		288352D71C0B99840048B5A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,8 +91,17 @@
 			children = (
 				286D736F1C1D88CD007EDCFB /* MasterViewController.swift */,
 				286D73701C1D88CD007EDCFB /* DetailViewController.swift */,
+				286D73731C1D915B007EDCFB /* LibraryTableViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		286D73751C1D91AA007EDCFB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				286D73761C1D91CD007EDCFB /* BookTableViewCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		288352C41C0B99840048B5A8 = {
@@ -129,6 +142,7 @@
 		28B0069A1C1B3B68003FAC7A /* App */ = {
 			isa = PBXGroup;
 			children = (
+				286D73751C1D91AA007EDCFB /* Views */,
 				286D736E1C1D88B7007EDCFB /* ViewControllers */,
 				286D73391C1BF14B007EDCFB /* JSON */,
 				286D73381C1BEEA9007EDCFB /* Resources */,
@@ -264,6 +278,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				286D73771C1D91CD007EDCFB /* BookTableViewCell.swift in Sources */,
+				286D73741C1D915B007EDCFB /* LibraryTableViewController.swift in Sources */,
 				286D73711C1D88CD007EDCFB /* MasterViewController.swift in Sources */,
 				28B0069E1C1B3EBF003FAC7A /* BookModel.swift in Sources */,
 				288352D11C0B99840048B5A8 /* AppDelegate.swift in Sources */,
