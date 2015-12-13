@@ -10,11 +10,12 @@
 		2808ECB21C1B468000EA65A0 /* LibraryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2808ECB11C1B468000EA65A0 /* LibraryModel.swift */; };
 		286D73371C1BEEA4007EDCFB /* books_readable.json in Resources */ = {isa = PBXBuildFile; fileRef = 286D73361C1BEEA4007EDCFB /* books_readable.json */; };
 		286D733B1C1BF162007EDCFB /* JSONProcesing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D733A1C1BF162007EDCFB /* JSONProcesing.swift */; };
+		286D736C1C1D88AB007EDCFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 286D736A1C1D88AB007EDCFB /* Main.storyboard */; };
+		286D736D1C1D88AB007EDCFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 286D736B1C1D88AB007EDCFB /* LaunchScreen.storyboard */; };
+		286D73711C1D88CD007EDCFB /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D736F1C1D88CD007EDCFB /* MasterViewController.swift */; };
+		286D73721C1D88CD007EDCFB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D73701C1D88CD007EDCFB /* DetailViewController.swift */; };
 		288352D11C0B99840048B5A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288352D01C0B99840048B5A8 /* AppDelegate.swift */; };
-		288352D31C0B99840048B5A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288352D21C0B99840048B5A8 /* ViewController.swift */; };
-		288352D61C0B99840048B5A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 288352D41C0B99840048B5A8 /* Main.storyboard */; };
 		288352D81C0B99840048B5A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 288352D71C0B99840048B5A8 /* Assets.xcassets */; };
-		288352DB1C0B99840048B5A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 288352D91C0B99840048B5A8 /* LaunchScreen.storyboard */; };
 		288352E61C0B99850048B5A8 /* HackerBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288352E51C0B99850048B5A8 /* HackerBooksTests.swift */; };
 		28B0069E1C1B3EBF003FAC7A /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B0069D1C1B3EBF003FAC7A /* BookModel.swift */; };
 /* End PBXBuildFile section */
@@ -33,12 +34,13 @@
 		2808ECB11C1B468000EA65A0 /* LibraryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryModel.swift; sourceTree = "<group>"; };
 		286D73361C1BEEA4007EDCFB /* books_readable.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = books_readable.json; sourceTree = "<group>"; };
 		286D733A1C1BF162007EDCFB /* JSONProcesing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONProcesing.swift; sourceTree = "<group>"; };
+		286D736A1C1D88AB007EDCFB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		286D736B1C1D88AB007EDCFB /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		286D736F1C1D88CD007EDCFB /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		286D73701C1D88CD007EDCFB /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		288352CD1C0B99840048B5A8 /* HackerBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackerBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		288352D01C0B99840048B5A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		288352D21C0B99840048B5A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		288352D51C0B99840048B5A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		288352D71C0B99840048B5A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		288352DA1C0B99840048B5A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		288352DC1C0B99840048B5A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		288352E11C0B99840048B5A8 /* HackerBooksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackerBooksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		288352E51C0B99850048B5A8 /* HackerBooksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackerBooksTests.swift; sourceTree = "<group>"; };
@@ -80,6 +82,15 @@
 			name = JSON;
 			sourceTree = "<group>";
 		};
+		286D736E1C1D88B7007EDCFB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				286D736F1C1D88CD007EDCFB /* MasterViewController.swift */,
+				286D73701C1D88CD007EDCFB /* DetailViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		288352C41C0B99840048B5A8 = {
 			isa = PBXGroup;
 			children = (
@@ -118,12 +129,12 @@
 		28B0069A1C1B3B68003FAC7A /* App */ = {
 			isa = PBXGroup;
 			children = (
+				286D736E1C1D88B7007EDCFB /* ViewControllers */,
 				286D73391C1BF14B007EDCFB /* JSON */,
 				286D73381C1BEEA9007EDCFB /* Resources */,
 				288352D71C0B99840048B5A8 /* Assets.xcassets */,
 				288352DC1C0B99840048B5A8 /* Info.plist */,
 				288352D01C0B99840048B5A8 /* AppDelegate.swift */,
-				288352D21C0B99840048B5A8 /* ViewController.swift */,
 				28B0069C1C1B3B8D003FAC7A /* Models */,
 				28B0069B1C1B3B78003FAC7A /* Storyboard */,
 			);
@@ -133,8 +144,8 @@
 		28B0069B1C1B3B78003FAC7A /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				288352D41C0B99840048B5A8 /* Main.storyboard */,
-				288352D91C0B99840048B5A8 /* LaunchScreen.storyboard */,
+				286D736A1C1D88AB007EDCFB /* Main.storyboard */,
+				286D736B1C1D88AB007EDCFB /* LaunchScreen.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -192,6 +203,9 @@
 		288352C51C0B99840048B5A8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					tags,
+				);
 				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Ramiro García Salazar";
@@ -229,10 +243,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				286D736C1C1D88AB007EDCFB /* Main.storyboard in Resources */,
+				286D736D1C1D88AB007EDCFB /* LaunchScreen.storyboard in Resources */,
 				286D73371C1BEEA4007EDCFB /* books_readable.json in Resources */,
-				288352DB1C0B99840048B5A8 /* LaunchScreen.storyboard in Resources */,
 				288352D81C0B99840048B5A8 /* Assets.xcassets in Resources */,
-				288352D61C0B99840048B5A8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,9 +264,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				286D73711C1D88CD007EDCFB /* MasterViewController.swift in Sources */,
 				28B0069E1C1B3EBF003FAC7A /* BookModel.swift in Sources */,
-				288352D31C0B99840048B5A8 /* ViewController.swift in Sources */,
 				288352D11C0B99840048B5A8 /* AppDelegate.swift in Sources */,
+				286D73721C1D88CD007EDCFB /* DetailViewController.swift in Sources */,
 				286D733B1C1BF162007EDCFB /* JSONProcesing.swift in Sources */,
 				2808ECB21C1B468000EA65A0 /* LibraryModel.swift in Sources */,
 			);
@@ -275,25 +290,6 @@
 			targetProxy = 288352E21C0B99840048B5A8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		288352D41C0B99840048B5A8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				288352D51C0B99840048B5A8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		288352D91C0B99840048B5A8 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				288352DA1C0B99840048B5A8 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		288352E81C0B99850048B5A8 /* Debug */ = {
@@ -385,6 +381,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.KeepCoding.rgs.HackerBooks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -396,6 +393,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.KeepCoding.rgs.HackerBooks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
