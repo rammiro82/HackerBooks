@@ -16,7 +16,7 @@ class LibraryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        loadData()
+        ///loadData()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -74,7 +74,9 @@ class LibraryTableViewController: UITableViewController {
         cell.lblTitle.text = book?.title
         cell.lblAuthors.text = book?.authors.joinWithSeparator(", ")
         
-        cell.imgBook.image = UIImage(data: <#T##NSData#>)
+        if let data = NSData(contentsOfURL: (book?.urlImage)!){
+            cell.imgBook.image = UIImage(data: data)
+        }
 
         return cell
     }

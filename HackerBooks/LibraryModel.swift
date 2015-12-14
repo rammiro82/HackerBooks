@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Library {
+class Library:NSObject {
     //
     var books   : [Book]
     
@@ -31,7 +31,7 @@ class Library {
         }
     }
     
-    init(){
+    override init(){
         self.books      = [Book]()
         self.tags       = [String]()
         self.tagsBooks  = [String:[Book]]()
@@ -42,7 +42,7 @@ class Library {
         tagsBooks = Dictionary<String, Array<Book>>()
         (self.tags,self.tagsBooks) = Library.procesarTags(books)
         
-        self.books = books
+        self.books = books.sort({$0 < $1})
     }
     
     // Cantidad de libros que hay en una temática
@@ -83,6 +83,6 @@ class Library {
             }
         }
         
-        return (todasTags, auxTagsBooks)
+        return (todasTags.sort({$0 < $1}), auxTagsBooks)
     }
 }
